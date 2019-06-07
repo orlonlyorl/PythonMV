@@ -9,3 +9,22 @@ from PIL import Image
 from pylab import *
 
 #读取图像到数组中
+im=array(Image.open('C:/Users/Administrator/PycharmProjects/PythonMV/Chaptor1/empire.jpg'))
+
+#绘制图像
+imshow(im)
+
+#一些点
+x = [100,100,400,400]
+y = [200,500,200,500]
+
+#使用红色星型标志绘制点
+plot(x,y,'r*')
+
+#链接前两个点的线
+plot(x[:4],y[:4])
+
+#添加标题显示绘制图像
+title('Plotting:"empire.jpg"')
+axis('off')
+show()
