@@ -7,24 +7,29 @@
 '''
 from PIL import Image
 from pylab import *
+import PCV
 
 #读取图像到数组中
 im=array(Image.open('C:/Users/Administrator/PycharmProjects/PythonMV/Chaptor1/empire.jpg'))
 
-#绘制图像
+figure()
+
+# 画有坐标轴的
+subplot(121)
 imshow(im)
+x = [100, 100, 400, 400]
+y = [200, 500, 200, 500]
+plot(x, y, 'r*')
+plot(x[:2], y[:2])
+title('plotting: "empire.jpg"')
 
-#一些点
-x = [100,100,400,400]
-y = [200,500,200,500]
-
-#使用红色星型标志绘制点
-plot(x,y,'r*')
-
-#链接前两个点的线
-plot(x[:4],y[:4])
-
-#添加标题显示绘制图像
-title('Plotting:"empire.jpg"')
-axis('off')
+# 不显示坐标轴
+subplot(122)
+imshow(im)
+x = [100, 100, 400, 400]
+y = [200, 500, 200, 500]
+plot(x, y, 'r*')
+plot(x[:4], y[:4])
+axis('off')  #显示坐标轴
+title('plotting: "empire.jpg"')
 show()
