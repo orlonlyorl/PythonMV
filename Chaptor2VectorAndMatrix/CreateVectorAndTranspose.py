@@ -16,3 +16,14 @@ print(t1.shape)
 print(t2)
 print(t2.shape)
 print('**向量的重置**')
+
+#计算向量的范数（norm）
+x = np.linalg.norm(a)
+print(x)
+
+x1 = 0
+for index in range(len(a)):
+    x1 = x1+a[index]*a[index]
+
+x2 = np.sqrt(x1)
+print(x2)

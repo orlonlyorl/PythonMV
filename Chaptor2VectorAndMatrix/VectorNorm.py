@@ -18,3 +18,4 @@ for index in range(len(a)):
 
 x2 = np.sqrt(x1)
 print(x2)
+
